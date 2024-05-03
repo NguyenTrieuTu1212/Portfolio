@@ -335,9 +335,16 @@ section {
 
 .article-container {
   display: flex;
-  flex-wrap: wrap; /* Cho phép các phần tử wrap khi không còn đủ không gian */
-  justify-content: flex-start; /* Hoặc space-between, tùy thuộc vào cách bạn muốn căn đều */
-  gap: 2.5rem; /* Khoảng cách giữa các phần tử */
+  flex-wrap: wrap; 
+  justify-content: flex-start;
+  gap: 2.5rem;
+}
+
+.article-container-project {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-around;
+  gap: 2.5rem;
 }
 
 article {
@@ -357,7 +364,7 @@ article .icon {
 
 #projects {
   position: relative;
-  margin-top: -3%;
+  margin-top: -5%;
 }
 
 .color-container {
