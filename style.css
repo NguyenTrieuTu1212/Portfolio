@@ -335,28 +335,29 @@ section {
 
 .article-container {
   display: flex;
-  text-align: initial;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 2.5rem;
-  justify-content: space-around;
+  flex-wrap: wrap; /* Cho phép các phần tử wrap khi không còn đủ không gian */
+  justify-content: flex-start; /* Hoặc space-between, tùy thuộc vào cách bạn muốn căn đều */
+  gap: 2.5rem; /* Khoảng cách giữa các phần tử */
 }
 
 article {
+  flex: 0 1 calc(33.33% - 2.5rem); /* Định rõ kích thước của mỗi article */
   display: flex;
-  width: 10rem;
-  justify-content: space-around;
-  gap: 0.5rem;
+  flex-direction: column; /* Đảo chiều dòng để nội dung căn theo grid */
+  align-items: center; /* Căn phần tử con theo trục ngang */
 }
+
 
 article .icon {
   cursor: default;
+  margin-left: 10px;
 }
 
 /* PROJECTS SECTION */
 
 #projects {
   position: relative;
+  margin-top: -3%;
 }
 
 .color-container {
@@ -379,6 +380,8 @@ article .icon {
   color: black;
   border-color: rgb(163, 163, 163);
 }
+
+
 
 /* CONTACT */
 
